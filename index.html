@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Hyze Vibra · AI Music Studio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-left">
+        <img src="https://i.imgur.com/3TQgMBb.png" alt="Hyze Vibra" class="logo-img">
+        <span class="brand-name">Hyze Vibra</span>
+        <span class="brand-badge">AI MUSIC STUDIO</span>
+    </div>
+    <a href="https://hyzebot.vercel.app" class="hyze-btn" target="_blank">
+        <img src="https://i.imgur.com/3TQgMBb.png" alt="Hyze" class="hyze-logo-small">
+        <span>Go to Hyze</span>
+    </a>
+</header>
+
+<div class="container" id="welcomeContainer">
+    <div class="welcome-screen">
+        <h1 class="welcome-title">Hyze Vibra</h1>
+        <p class="welcome-subtitle">Your AI music companion. Describe any song, mood, or style — instant generation.</p>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="e.g., play lo-fi beats, make a cinematic track..." autocomplete="off">
+                <button class="search-btn" id="searchBtn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="quick-prompts">
+            <span class="quick-prompt" data-prompt="play relaxing ambient music">🧘 Play Ambient</span>
+            <span class="quick-prompt" data-prompt="make an energetic workout beat">⚡ Make Workout</span>
+            <span class="quick-prompt" data-prompt="create lo-fi hip hop study session">🎧 Create Lo-Fi</span>
+            <span class="quick-prompt" data-prompt="generate cinematic orchestral piece">🎻 Generate Cinematic</span>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="chatContainer" style="display: none;">
+    <div class="chat-screen" id="chatScreen">
+        <div class="chat-header">
+            <button class="back-btn" id="backBtn"><i class="fas fa-chevron-left"></i> New Session</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-area">
+            <div class="search-container">
+                <div class="search-box" id="chatInputBox">
+                    <input type="text" class="search-input" id="chatInput" placeholder="Say hi, or ask me to play a song..." autocomplete="off">
+                    <button class="search-btn" id="chatSendBtn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="yt-hidden"><div id="player"></div></div>
+
+<script src="script.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
